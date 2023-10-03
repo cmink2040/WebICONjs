@@ -6,7 +6,7 @@
 function create_config() {
     var fs = require('fs');
 
-    if(fs.existsSync('./webicon-config.js')) {
+    if(fs.existsSync('./webicon-config.cjs')) {
         console.log('Configuration file already exists. Please edit it manually. If you want it to be overwritten, delete it and run this command again.');
         process.exit(1);
     }
@@ -14,7 +14,7 @@ function create_config() {
     else {
 
         console.log('Creating configuration file...')
-        fs.writeFileSync('./webicon-config.js', 
+        fs.writeFileSync('./webicon-config.cjs', 
         ' module.exports = { \n \
             data: {\n \
             "url": "http://localhost:8912", \n \

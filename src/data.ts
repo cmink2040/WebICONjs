@@ -1,11 +1,17 @@
-const path = require('path');
+//import path from 'path';
 
 // Access a directory in the project root using process.cwd()
-const rootDirectoryPath = process.cwd();
+// let rootDirectoryPath = process.cwd();
+
+let rootDirectoryPath = "/"
 
 // Construct a path relative to the project root
-const filePath = path.join(rootDirectoryPath, 'webicon-config.js');
+//const filePath = path.join(rootDirectoryPath, 'webicon-config.cjs');
 
-console.log(filePath)
+const filePath = "webicon-config.cjs"
 
-export const data = require( filePath);
+//console.log(filePath)
+
+const data = await import ("/"+filePath)
+
+export default data 

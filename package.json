@@ -4,6 +4,7 @@
   "description": "Icon manager javascript library to work with Webiconjs backend",
   "main": "index.js",
   "author": "CMinK",
+  "type": "module",  
   "repository": "https://github.com/cmink2040/WebICONjs",
   "homepage": "https://webiconjs.cmink.lmchkt.com",
   "license": "MIT",

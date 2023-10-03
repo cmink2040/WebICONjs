@@ -1,17 +1,16 @@
 'use strict'
 
+import index from './dist/index.js'
+import data from './dist/data.js'
+//import JS_Entry from './dist/JS-Entry.js'
+import Entry from './dist/React-Entry.js'
 
-
-const index = require('./dist/index.js')
-const data = require('./dist/data.js')
-const JS_Entry = require('./dist/JS-Entry.js')
-const React_Entry = require('./dist/React-Entry.js')
-
-module.exports = {
-    index,
-    data,
-    JS_Entry,
-    React_Entry
+export default {
+    index: index,
+    data: data,
+    // JS_Entry: JS_Entry,
+    Entry : Entry,
 }
+
 
 
