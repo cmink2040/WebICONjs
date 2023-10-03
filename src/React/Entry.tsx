@@ -1,12 +1,16 @@
-import data from '../data.js';
-
+import data from '../../data.ts'
 import React from 'react';
 
 const gicon = data["url"] + data["google-icons"]  + "/";
 
 const skyai = data["url"] + data["social-icons"] + "/" + data["skyai"]+"/";
 
-const from_bin = {
+type dict_lookup = {
+        [key: string]: string
+    }
+
+
+const from_bin: dict_lookup = {
         "gicon":  data["google-icons"],
         "skyai":  data["social-icons"] + "/" + data["skyai"]
 }
@@ -22,12 +26,12 @@ interface EntryProps {
     className?: string;
 }
 
-const LDMode = {
+const LDMode : dict_lookup = {
         'light': data['light-mode'],
         'dark': data['dark-mode']
 }
 
-const FileTypes = {
+const FileTypes : dict_lookup = {
         'svg': '.svg',
         'png': '.png',
         'jpg': '.jpg',

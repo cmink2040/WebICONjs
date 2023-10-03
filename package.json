@@ -1,6 +1,6 @@
 {
-  "name": "webicons-backend",
-  "version": "1.0.0",
+  "name": "webiconsjs",
+  "version": "0.0.1",
   "description": "Icon manager",
   "main": "index.js",
   "author": "CMinK",
@@ -8,17 +8,16 @@
   "dependencies": {
     "fs": "^0.0.1-security",
     "react": "^18.2.0",
-    "ts": "^0.2.2",
     "typescript": "^5.2.2"
   },
   "bin": {
-    "init": "./bsrc/run.sh"
+    "init": "node ./create-config.ts"
   },
   "devDependencies": {
     "@types/node": "^20.8.2"
   },
   "scripts": {
     "start": "./bsrc/run.sh",
-    "ts": "tsc"
+    "tsc": "tsc"
   }
 }
