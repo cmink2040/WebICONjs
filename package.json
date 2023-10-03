@@ -22,7 +22,9 @@
   },
   "scripts": {
     "start": "./bsrc/run.sh",
-    "tsc": "tsc"
+    "tsc": "tsc",
+    "rollup": "rollup -c"
+
   },
   "files": [
     "lib",
