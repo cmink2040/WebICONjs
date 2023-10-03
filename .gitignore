@@ -1,10 +1,16 @@
 node_modules
 
+# Testing files
+test
 
-Icons
+# Output directory for webicon
+dist
 
 # Configuration file for webicon
 webicon-config.js
+
+
+
 
 
 

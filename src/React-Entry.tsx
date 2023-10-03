@@ -1,4 +1,4 @@
-import {data} from '../../lib/data'
+import {data} from './data'
 import React from 'react';
 
 const gicon = data["url"] + data["google-icons"]  + "/";
@@ -14,9 +14,6 @@ const from_bin: dict_lookup = {
         "gicon":  data["google-icons"],
         "skyai":  data["social-icons"] + "/" + data["skyai"]
 }
-
-
-
 
 const LDMode : dict_lookup = {
         'light': data['light-mode'],
