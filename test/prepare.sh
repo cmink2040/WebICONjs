@@ -1,0 +1,2 @@
+yarn pack
+yarn install
