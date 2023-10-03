@@ -1,4 +1,4 @@
-import data from '../../data.ts'
+import {data} from '../../lib/data'
 import React from 'react';
 
 const gicon = data["url"] + data["google-icons"]  + "/";

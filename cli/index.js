@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 
-const cc = require('cli/create-config.js')
+const cc = require('./create-config')
 cc.create_config()
 
   
