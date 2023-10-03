@@ -4,6 +4,8 @@
   "description": "Icon manager",
   "main": "index.js",
   "author": "CMinK",
+  "repository": "https://github.com/cmink2040/WebICONjs",
+  "homepage": "https://webiconjs.cmink.lmchkt.com",
   "license": "MIT",
   "dependencies": {
     "fs": "^0.0.1-security",
@@ -11,7 +13,7 @@
     "typescript": "^5.2.2"
   },
   "bin": {
-    "init": "node ./create-config.ts"
+    "webiconjs": "cli"
   },
   "devDependencies": {
     "@types/node": "^20.8.2"

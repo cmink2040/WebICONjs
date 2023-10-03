@@ -16,15 +16,7 @@ const from_bin: dict_lookup = {
 }
 
 
-interface EntryProps {
-    name: string;
-    location: string;
-    mode: string;
-    type: string;
 
-
-    className?: string;
-}
 
 const LDMode : dict_lookup = {
         'light': data['light-mode'],
@@ -39,6 +31,15 @@ const FileTypes : dict_lookup = {
         'gif': '.gif',
 }
 
+interface EntryProps {
+        
+        name: string;
+        location: string;
+        mode: string;
+        type: string;
+    
+        className?: string;
+    }
 
 const Entry = (props:EntryProps) => {
     const src = data["url"]+from_bin[props.location] + "/" + LDMode[props.mode]+"/"+ props.name + FileTypes[props.type];
