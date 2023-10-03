@@ -1,4 +1,3 @@
 const Event = require('webiconjs')
 
-Event.printTrue()
-
+console.log(Event.data)

@@ -12,7 +12,7 @@ export default [
 		'src/data.ts'], // Entry point of your application
 		output: {
 			dir: 'dist', // Output file in the dist folder
-			format: 'cjs', // CommonJS format for Node.js
+			format: 'esm', // CommonJS format for Node.js
 			sourcemap: true
 		},
 		plugins: [
@@ -26,4 +26,5 @@ export default [
 			terser() // Minify the output bundle (optional)
 		]
 	},
+
 ];
