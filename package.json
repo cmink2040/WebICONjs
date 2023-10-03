@@ -2,18 +2,21 @@
   "name": "webiconjs",
   "version": "0.0.1",
   "description": "Icon manager javascript library to work with Webiconjs backend",
-  "main": "src/index.js",
+  "main": "index.js",
   "author": "CMinK",
   "repository": "https://github.com/cmink2040/WebICONjs",
   "homepage": "https://webiconjs.cmink.lmchkt.com",
   "license": "MIT",
+
   "dependencies": {
     "fs": "^0.0.1-security",
     "react": "^18.2.0"
   },
+
   "bin": {
     "webiconjs": "cli"
   },
+
   "devDependencies": {
     "@rollup/plugin-commonjs": "^25.0.4",
     "@rollup/plugin-node-resolve": "^15.2.1",
@@ -28,13 +31,9 @@
   "scripts": {
     "tsc": "tsc",
     "rollup": "rollup -c",
-    "test": "chmod +x ./test/prepare.sh && ./test/prepare.sh",
     "build": "tsc && rollup -c",
-    "start": "node dist/bundle.js"
+    "start": "node dist/index.js"
   },
-  "files": [
-    "lib",
-    "cli",
-    "src"
-  ]
+
+  "files": ["dist/","cli/", "index.js","LICENSE","package.json"]
 }
