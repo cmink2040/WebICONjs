@@ -6,13 +6,19 @@
   "author": "CMinK",
   "license": "MIT",
   "dependencies": {
-    "react": "^18.2.0"
+    "fs": "^0.0.1-security",
+    "react": "^18.2.0",
+    "ts": "^0.2.2",
+    "typescript": "^5.2.2"
+  },
+  "bin": {
+    "init": "./bsrc/run.sh"
   },
   "devDependencies": {
-    "@types/node": "^20.5.0"
+    "@types/node": "^20.8.2"
   },
-
   "scripts": {
-    "start": "./bsrc/run.sh"
+    "start": "./bsrc/run.sh",
+    "ts": "tsc"
   }
 }

@@ -1,4 +1,4 @@
-import data from './UrlsADir';
+import data from '../data.js';
 
 import React from 'react';
 
