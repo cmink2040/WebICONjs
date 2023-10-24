@@ -36,5 +36,5 @@
     "start": "node dist/index.js"
   },
 
-  "files": ["dist/","cli/", "index.js","LICENSE","package.json"]
+  "files": ["dist/","cli/", "lib/", "index.js","LICENSE","package.json"]
 }

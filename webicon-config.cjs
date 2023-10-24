@@ -1,6 +1,6 @@
  module.exports = { 
          data: { 
-          "url": "http://localhost:8912", 
+         "url": "http://localhost:8912", 
          "light-mode": "Light-Mode", 
          "dark-mode": "Dark-Mode", 
          "color-mode": "Color-Mode", 
