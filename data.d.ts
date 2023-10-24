@@ -1,5 +1,5 @@
 // data.d.ts
-declare module 'data' {
+export declare module 'data' {
     const data: {
         [key: string]: string;
       };

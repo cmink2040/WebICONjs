@@ -6,7 +6,8 @@
  *
  * Generates a configuration file for the application, or updates an existing one if it exists.
  */
-import fs from 'fs';
+
+const fs = require ('fs');
 
 
 if(fs.existsSync('./webicon-config.cjs')) {

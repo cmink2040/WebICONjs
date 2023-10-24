@@ -8,8 +8,7 @@ export default [
 		input: [
 		'src/index.ts', 
 		'src/JS-Entry.ts', 
-		'src/React-Entry.tsx', 
-		'src/data.ts'], // Entry point of your application
+		'src/React-Entry.tsx'], // Entry point of your application
 		output: {
 			dir: 'dist', // Output file in the dist folder
 			format: 'esm', // CommonJS format for Node.js
@@ -24,7 +23,7 @@ export default [
 				inlineSources: true,
 			  }),, // Transpile TypeScript and handle .tsx files
 			terser() // Minify the output bundle (optional)
-		]
+		] ,
 	},
 
 ];

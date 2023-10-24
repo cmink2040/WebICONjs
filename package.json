@@ -1,10 +1,9 @@
 {
   "name": "webiconjs",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Icon manager javascript library to work with Webiconjs backend",
   "main": "index.js",
   "author": "CMinK",
-  "type": "module",  
   "repository": "https://github.com/cmink2040/WebICONjs",
   "homepage": "https://webiconjs.cmink.lmchkt.com",
   "license": "MIT",
@@ -15,7 +14,8 @@
   },
 
   "bin": {
-    "webiconjs": "cli"
+    "webicon": "cli/index.js",
+    "webiconjs": "cli/index.js"
   },
 
   "devDependencies": {
