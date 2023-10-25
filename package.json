@@ -1,6 +1,6 @@
 {
   "name": "webiconjs",
-  "version": "0.0.2",
+  "version": "0.0.30",
   "description": "Icon manager javascript library to work with Webiconjs backend",
   "main": "index.js",
   "author": "CMinK",
@@ -37,7 +37,7 @@
     "start": "node dist/index.js"
   },
   "files": [
-    "src/",
+    "dist/",
     "cli/",
     "lib/",
     "index.js",

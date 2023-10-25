@@ -10,8 +10,7 @@ const dat: Types =  data;
 const fetchData = async () => {
     const data = await import('../data');
     console.log(data, " DATA FILE IMPORTED");
-
-    return data;
+    return data.default.data;
 };
 
 function print_data() {

@@ -3,9 +3,7 @@ import React from 'react';
 
 const fetchData = async () => {
         const data = await import('../data');
-        console.log(data, " DATA FILE IMPORTED");
-
-        return data.default;
+        return data.default.data;
 };
 
 interface EntryProps {
@@ -17,42 +15,31 @@ interface EntryProps {
     
         className?: string;
     }
+
 interface Types {
-        [key: string]: any;
+        [key: string]: string;
 }
 
-const dat: Types =  await fetchData();
+
+
 
 const Entry = (props:EntryProps) => {
         const [URL, setURL] = React.useState("");
+        const [dat, setDat] = React.useState(null);
+
+
+     
         
         React.useEffect(() => {
                 fetchData().then((data) => {
-                        console.log(data);
-                        const src = dat.data["url"]+from_bin[props.location] + "/" + LDMode[props.mode]+"/"+ props.name + FileTypes[props.type];
+                        const dat : any = data;
+                        const src = dat["url"]+dat[props.location] + "/" + dat[props.mode]+"/"+ props.name + FileTypes[props.type];
                         setURL(src);
+                        setDat(data);
                 });
         }, []);
-
-        const gicon = dat.data["url"] + dat.data["google-icons"]  + "/";
-        const skyai = dat.data["url"] + dat.data["social-icons"] + "/" + dat.data["skyai"]+"/";
-        
-        type dict_lookup = {
-                [key: string]: string
-            }
-        
-        
-        const from_bin: dict_lookup = {
-                "gicon":  dat.data["google-icons"],
-                "skyai":  dat.data["social-icons"] + "/" + dat.data["skyai"]
-        }
-        
-        const LDMode : dict_lookup = {
-                'light': dat.data['light-mode'],
-                'dark': dat.data['dark-mode']
-        }
-        
-        const FileTypes : dict_lookup = {
+     
+        const FileTypes : Types = {
                 'svg': '.svg',
                 'png': '.png',
                 'jpg': '.jpg',
