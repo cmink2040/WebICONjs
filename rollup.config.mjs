@@ -3,6 +3,8 @@ import commonjs from '@rollup/plugin-commonjs';
 import typescript from '@rollup/plugin-typescript';
 import terser from '@rollup/plugin-terser';
 
+import { fileURLToPath } from 'node:url';
+
 export default [
 	{
 		input: [
@@ -14,7 +16,12 @@ export default [
 			format: 'esm', // CommonJS format for Node.js
 			sourcemap: true
 		},
-		external: ['react'], // External dependencies, ignores react
+		external: ['react', fileURLToPath(
+			new URL(
+				'./data.js',
+				import.meta.url
+			)
+		)], // External dependencies, ignores react
 		plugins: [
 			resolve(), // Resolves node_modules dependencies
 			commonjs(), // Converts CommonJS modules to ES6
