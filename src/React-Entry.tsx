@@ -10,11 +10,15 @@ interface EntryProps {
     
         className?: string;
     }
+interface Types {
+        [key: string]: any;
+}
 
+const dat: Types =  data;
 
 const Entry = (props:EntryProps) => {
-        const gicon = data["url"] + data["google-icons"]  + "/";
-        const skyai = data["url"] + data["social-icons"] + "/" + data["skyai"]+"/";
+        const gicon = dat.data["url"] + dat.data["google-icons"]  + "/";
+        const skyai = dat.data["url"] + dat.data["social-icons"] + "/" + dat.data["skyai"]+"/";
         
         type dict_lookup = {
                 [key: string]: string
@@ -22,13 +26,13 @@ const Entry = (props:EntryProps) => {
         
         
         const from_bin: dict_lookup = {
-                "gicon":  data["google-icons"],
-                "skyai":  data["social-icons"] + "/" + data["skyai"]
+                "gicon":  dat.data["google-icons"],
+                "skyai":  dat.data["social-icons"] + "/" + dat.data["skyai"]
         }
         
         const LDMode : dict_lookup = {
-                'light': data['light-mode'],
-                'dark': data['dark-mode']
+                'light': dat.data['light-mode'],
+                'dark': dat.data['dark-mode']
         }
         
         const FileTypes : dict_lookup = {
@@ -41,7 +45,7 @@ const Entry = (props:EntryProps) => {
         
        
 
-    const src = data["url"]+from_bin[props.location] + "/" + LDMode[props.mode]+"/"+ props.name + FileTypes[props.type];
+    const src = dat.data["url"]+from_bin[props.location] + "/" + LDMode[props.mode]+"/"+ props.name + FileTypes[props.type];
 
     return <img src={src} className={props.className} 
             alt={`Could not find: ${props.name} at ${props.location}`}/>
