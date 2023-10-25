@@ -1,5 +1,12 @@
-import data from '../data';
+// import data from '../data';
 import React from 'react';
+
+const fetchData = async () => {
+        const data = await import('../data');
+        console.log(data, " DATA FILE IMPORTED");
+
+        return data.default;
+};
 
 interface EntryProps {
                 
@@ -14,9 +21,19 @@ interface Types {
         [key: string]: any;
 }
 
-const dat: Types =  data;
+const dat: Types =  await fetchData();
 
 const Entry = (props:EntryProps) => {
+        const [URL, setURL] = React.useState("");
+        
+        React.useEffect(() => {
+                fetchData().then((data) => {
+                        console.log(data);
+                        const src = dat.data["url"]+from_bin[props.location] + "/" + LDMode[props.mode]+"/"+ props.name + FileTypes[props.type];
+                        setURL(src);
+                });
+        }, []);
+
         const gicon = dat.data["url"] + dat.data["google-icons"]  + "/";
         const skyai = dat.data["url"] + dat.data["social-icons"] + "/" + dat.data["skyai"]+"/";
         
@@ -42,12 +59,8 @@ const Entry = (props:EntryProps) => {
                 'jpeg': '.jpeg',
                 'gif': '.gif',
         }
-        
-       
 
-    const src = dat.data["url"]+from_bin[props.location] + "/" + LDMode[props.mode]+"/"+ props.name + FileTypes[props.type];
-
-    return <img src={src} className={props.className} 
+    return <img src={URL} className={props.className} 
             alt={`Could not find: ${props.name} at ${props.location}`}/>
     
    

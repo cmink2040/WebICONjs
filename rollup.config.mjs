@@ -14,6 +14,7 @@ export default [
 			format: 'esm', // CommonJS format for Node.js
 			sourcemap: true
 		},
+		external: ['react'], // External dependencies, ignores react
 		plugins: [
 			resolve(), // Resolves node_modules dependencies
 			commonjs(), // Converts CommonJS modules to ES6

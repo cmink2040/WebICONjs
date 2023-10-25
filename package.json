@@ -7,18 +7,18 @@
   "repository": "https://github.com/cmink2040/WebICONjs",
   "homepage": "https://webiconjs.cmink.lmchkt.com",
   "license": "MIT",
-
   "dependencies": {
     "fs": "^0.0.1-security",
     "react": "^18.2.0"
-  },
 
+  },
+  "peerDependencies": {
+  },
   "bin": {
     "webicon": "cli/index.js",
     "webiconjs": "cli/index.js",
     "webicon-out": "lib/index.js"
   },
-
   "devDependencies": {
     "@rollup/plugin-commonjs": "^25.0.4",
     "@rollup/plugin-node-resolve": "^15.2.1",
@@ -36,6 +36,12 @@
     "build": "tsc && rollup -c",
     "start": "node dist/index.js"
   },
-
-  "files": ["src/","cli/", "lib/", "index.js","LICENSE","package.json"]
+  "files": [
+    "src/",
+    "cli/",
+    "lib/",
+    "index.js",
+    "LICENSE",
+    "package.json"
+  ]
 }

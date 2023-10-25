@@ -7,11 +7,17 @@ interface Types {
 
 const dat: Types =  data;
 
+const fetchData = async () => {
+    const data = await import('../data');
+    console.log(data, " DATA FILE IMPORTED");
+
+    return data;
+};
+
 function print_data() {
-    console.log(data)
-    console.log(data.url)
-    console.log(dat.data["url"])
+    console.log(dat, " is the data")
+    console.log(dat.data["url"], "is the URL")
 }
 
 
-export default {print_data};
+export default {print_data, fetchData};
